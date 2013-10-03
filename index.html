@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Go for Statistical Programming</title>
+    <title>Introduction to Go </title>
     <meta charset='utf-8'>
     <script src='static/slides.js'></script>
     <script>
@@ -22,9 +22,9 @@
     <section class='slides layout-widescreen'>
       
       <article>
-        <h1>Go for Statistical Programming</h1>
-        <h3>NY Open Statistical Programming Meetup: Knewton HQ</h3>
-        <h3>19 August 2013</h3>
+        <h1>Introduction to Go </h1>
+        <h3>hackNY Masters Conference</h3>
+        <h3>28 September 2013</h3>
         
           <div class="presenter">
             
@@ -52,6 +52,14 @@
   <img src="88x31.png">
 </div>
 
+  <ul>
+  
+    <li>Text provided under CC-BY-SA</li>
+  
+    <li>Code provided under GPLv3 unless otherwise stated</li>
+  
+  </ul>
+
       
       </article>
   
@@ -63,7 +71,9 @@
         
   <ul>
   
-    <li>Studied computer science and statistics at Columbia</li>
+    <li>Master&#39;s student in computer science at Cornell NYC Tech </li>
+  
+    <li>Studied computer science and statistics at Columbia University</li>
   
     <li>Worked on the server team at foursquare (Explore recommendation engine)</li>
   
@@ -143,396 +153,6 @@
     <li>Easy to <b>build &amp; deploy</b></li>
   
   </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>OkCupid Data Workflow (circa 2009)</h3>
-        
-  <ul>
-  
-    <li>80% munging (Python), 20% statistical analysis (R)</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Python in 2009</h3>
-        
-  <ul>
-  
-    <li>In 2009, Python was useable for data science, but not as convenient as today</li>
-  
-    <li>Tools like Pandas either didn&#39;t exist yet or were not stable/widely adopted</li>
-  
-    <li>RPy existed (since 2002)</li>
-  
-    <li>Numpy existed (since 2005, previously &#34;Numeric&#34;)</li>
-  
-    <li>Scipy existed, though with far fewer components and features</li>
-  
-    <li>All the munging tools were in place, but numerical tools were lagging somewhat</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Go in 2013</h3>
-        
-  <ul>
-  
-    <li>Lots of munging tools available</li>
-  
-    <li>Numerical tools exist, but are still WIPs</li>
-  
-    <li><a href="https://github.com/sbinet/go-python" target="_blank">go-python</a> provides CPython bindings</li>
-  
-    <li><a href="https://github.com/skelterjohn/go.matrix" target="_blank">go-matrix</a> provides some vector/matrix operations</li>
-  
-    <li>No clear equivalent to Pandas yet</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Advantages of Go (for statisticians)</h3>
-        
-  <ul>
-  
-    <li>Very fast (runtime)</li>
-  
-    <li>Very fast (compilation)</li>
-  
-    <li>Native concurrency </li>
-  
-    <li>Easy parallelization (R is single threaded, Python has GIL)</li>
-  
-    <li>Portable (cross-compilation)</li>
-  
-    <li>Can call other languages from within Go</li>
-  
-    <li>Type system: safety of static typing, with the flexibility of dynamic (via interfaces)</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Disadvantages of Go</h3>
-        
-  <ul>
-  
-    <li>Relatively new language (but not that new)!</li>
-  
-    <li>Academia tends to be slower to pick up new tools</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Speed</h3>
-        
-  <ul>
-  
-    <li>Go tends to be <b>&gt;10x</b> faster than Python (and <b>&gt;50x</b> faster than R)</li>
-  
-    <li>Go compiles as fast as the Python interpreter takes to start up</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Type system</h3>
-        
-  <ul>
-  
-    <li>Go is <b>statically typed</b> </li>
-  
-    <li>Go&#39;s <b>type inference</b> makes static typing painless</li>
-  
-  </ul>
-
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code typing_example.go}}
---><pre>func addOne(a int) int {
-    return a + 1
-}
-func main(){
-    a := 5
-    b := addOne(a) //Assigned type is inferred
-}</pre></div>
-
-  <ul>
-  
-    <li>Go&#39;s <b>interfaces</b> provide some of the benefits of dynamic typing</li>
-  
-    <li>Refactoring and debugging are easier because the compiler is strict</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h2>Getting started with Go</h2>
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Go for Python programmers</h3>
-        
-  <ul>
-  
-    <li>Go fits the <a href="http://www.python.org/dev/peps/pep-0020/" target="_blank">Zen of Python</a> very well</li>
-  
-    <li>You will love gofmt</li>
-  
-    <li>You will love the native concurrency</li>
-  
-    <li>You will miss duck typing at first, until you learn to use interfaces</li>
-  
-  </ul>
-
-  
-  <p>
-    See also: <a href="https://github.com/ChimeraCoder/go-for-pythonists" target="_blank">Go for Pythonists</a>
-  </p>
-  
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Go for R programmers</h3>
-        
-  <ul>
-  
-    <li>Go&#39;s structs &amp; methods are far simpler than S3/S4 methods</li>
-  
-    <li>You will love the speed and reliability</li>
-  
-    <li>You will love the native concurrency</li>
-  
-    <li>You will miss the &#39;lapply&#39;, etc. paradigms at first.</li>
-  
-    <li>You will miss the diverse selection of advanced statistical packages</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Tips for R programmers</h3>
-        
-  <ul>
-  
-    <li>Go is more imperative than R - get used to explicit iterations</li>
-  
-    <li>Structs are very lightweight - don&#39;t be afraid to use them</li>
-  
-    <li>Let the compiler guide you</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Function declaration</h3>
-        
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code function_declaration.go}}
---><pre>func doSomething(){
-    var foo int
-    foo = 6
-    bar := 8
-}</pre></div>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Zero values</h3>
-        
-  <ul>
-  
-    <li>By default, an uninitialized value carries the <b>zero value</b> for that type</li>
-  
-    <li>Encourages you to design your application in such a way that the default values are meaningful</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>For loops/If statements</h3>
-        
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code for_loop_example.go}}
---><pre>func PrintAllNames(names []string){
-    for _, name := range names {
-        if name != &#34;&#34; {
-            fmt.Println(name)
-        }
-    }
-}</pre></div>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Error Handling</h3>
-        
-  <ul>
-  
-    <li><b>Explicit is better than implicit</b></li>
-  
-    <li>Instead of raising exceptions, <b>return errors</b></li>
-  
-    <li>Errors are more <b>visible</b> in the code</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Structs</h3>
-        
-  <ul>
-  
-    <li>All fields are defined at compiletime</li>
-  
-    <li><b>No</b> inheritance</li>
-  
-  </ul>
-
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code struct_example.go}}
---><pre>type CheckingAccount struct {
-    Balance int
-    superSecretId int64
-}</pre></div>
-
-  <ul>
-  
-    <li>Embedded structs are permitted</li>
-  
-  </ul>
-
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code embedded_struct.go}}
---><pre>type Person struct {
-    MainAccount CheckingAccount
-}
-
-type Bank struct {
-    Accounts []CheckingAccount
-    SavingsAccounts []struct{
-        Balance int
-        InterestRate float64
-    }
-}</pre></div>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Interfaces in Go</h3>
-        
-  <ul>
-  
-    <li>If <b>any</b> type provides the methods of an interface, it belongs to the interface</li>
-  
-    <li>Like dynamic languages with &#34;duck&#34; typing, you simply use the struct and it &#34;just works&#34;</li>
-  
-    <li>Unlike dynamic languages, safety is checked at compile-time</li>
-  
-  </ul>
-
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>Using Interfaces</h3>
-        
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code interface_example.go}}
---><pre>type Account interface {
-    Deposit(int) error
-}
-
-type CheckingAccount struct {
-    Balance int 
-        superSecretId int64
-}
-
-func (destination CheckingAccount) Deposit(amount int) error {
-    destination.Balance += amount
-    return nil
-}</pre></div>
 
       
       </article>
@@ -623,6 +243,8 @@ func (destination CheckingAccount) Deposit(amount int) error {
 func main() {
     Greet(&#34;Alice&#34;)
     Greet(&#34;Bob&#34;)
+
+    time.Sleep(5 * time.Second)
 }</pre></div>
 
       
@@ -769,6 +391,181 @@ func main() {
   
       <article>
       
+        <h3>Advantages of Go</h3>
+        
+  <ul>
+  
+    <li>Very fast (runtime)</li>
+  
+    <li>Very fast (compilation)</li>
+  
+    <li>Native concurrency </li>
+  
+    <li>Memory management</li>
+  
+    <li>Easy parallelization (Node.js is single threaded, Python and Ruby have the GIL)</li>
+  
+    <li>Portable (cross-compilation)</li>
+  
+    <li>Can call other languages from within Go</li>
+  
+    <li>Type system: safety of static typing, with the flexibility of dynamic (via interfaces)</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Disadvantages of Go</h3>
+        
+  <ul>
+  
+    <li>Relatively new language (but not that new)!</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Python in 2009</h3>
+        
+  <ul>
+  
+    <li>In 2009, Python was useable for data science, but not as convenient as today</li>
+  
+    <li>Tools like Pandas either didn&#39;t exist yet or were not stable/widely adopted</li>
+  
+    <li>RPy existed (since 2002)</li>
+  
+    <li>Numpy existed (since 2005, previously &#34;Numeric&#34;)</li>
+  
+    <li>Scipy existed, though with far fewer components and features</li>
+  
+    <li>All the munging tools were in place, but numerical tools were lagging somewhat</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Go in 2013</h3>
+        
+  <ul>
+  
+    <li>Lots of munging tools available</li>
+  
+    <li>Numerical tools exist, but are still WIPs</li>
+  
+    <li><a href="https://github.com/sbinet/go-python" target="_blank">go-python</a> provides CPython bindings</li>
+  
+    <li><a href="https://github.com/skelterjohn/go.matrix" target="_blank">go-matrix</a> provides some vector/matrix operations</li>
+  
+    <li>No clear equivalent to Pandas yet</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Speed</h3>
+        
+  <ul>
+  
+    <li>Go tends to be <b>&gt;10x</b> faster than Python</li>
+  
+    <li>Go compiles as fast as the Python interpreter takes to start up</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Type system</h3>
+        
+  <ul>
+  
+    <li>Go is <b>statically typed</b> </li>
+  
+    <li>Go&#39;s <b>type inference</b> makes static typing painless</li>
+  
+  </ul>
+
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code typing_example.go}}
+--><pre>func addOne(a int) int {
+    return a + 1
+}
+func main(){
+    a := 5
+    b := addOne(a) //Assigned type is inferred
+}</pre></div>
+
+  <ul>
+  
+    <li>Go&#39;s <b>interfaces</b> provide some of the benefits of dynamic typing</li>
+  
+    <li>Refactoring and debugging are easier because the compiler is strict</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Go for Python/Ruby/Node.js programmers</h3>
+        
+  <ul>
+  
+    <li>Go fits the <a href="http://www.python.org/dev/peps/pep-0020/" target="_blank">Zen of Python</a> very well</li>
+  
+    <li>You will love gofmt</li>
+  
+    <li>You will love the native concurrency</li>
+  
+    <li>You will miss duck typing at first, until you learn to use interfaces</li>
+  
+    <li>You will love <a href="github.com/ChimeraCoder/gojson" target="_blank">gojson</a> for handling JSON</li>
+  
+  </ul>
+
+  
+  <p>
+    See also: <a href="https://github.com/ChimeraCoder/go-for-pythonists" target="_blank">Go for Pythonists</a>
+<br>
+
+    See also: <a href="http://golang.org/doc/effective_go.html" target="_blank">Effective Go</a>
+  </p>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
         <h2>Data processing in Go</h2>
       
       </article>
@@ -812,36 +609,30 @@ func main() {
   
       <article>
       
-        <h3>Example: Rate-Limiting &amp; Scraping</h3>
+        <h3>Rate-limiting a Twitter API Client in Go</h3>
         
-  <ul>
-  
-    <li>(For the full project, see <a href="github.com/ChimeraCoder/goangel" target="_blank">goangel</a> on Github)</li>
-  
-  </ul>
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code anaconda_example.go}}
+--><pre>//throttledQuery executes and automatically throttles queries according to SECONDS_PER_QUERY
+func (c TwitterApi) throttledQuery() {
+    for q := range c.queryQueue {
+        now := time.Now()
 
-  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code rate_limit_example.go}}
---><pre>//Execute a query that will automatically be throttled
-func throttledQuery(queryQueue chan queryChan) {
-    for q := range queryQueue {
+        err := c.execQuery(q.url, q.form, q.data, q.method)
 
-        endpoint_path := q.endpoint_path
-        method := q.method
-        keyVals := q.keyVals
-        response_ch := q.response_ch
-        result, err := Query(endpoint_path, method, keyVals)
-        response_ch &lt;- struct {
-            result []byte
-                err    error
-        }{result, err}
+        q.response_ch &lt;- struct {
+            data interface{}
+            err  error
+        }{q.data, err}
 
-        time.Sleep(SECONDS_PER_QUERY)
+        time.Sleep(SECONDS_PER_QUERY - time.Since(now))
     }
 }</pre></div>
 
   <ul>
   
-    <li>This lets us decouple the asynchronous scraping from the (synchronous) rate-limiting</li>
+    <li>This lets us <b>decouple</b> the asynchronous scraping from the (synchronous) rate-limiting</li>
+  
+    <li>Full code available on <a href="http://github.com/ChimeraCoder/anaconda" target="_blank">github.com/ChimeraCoder/anaconda</a></li>
   
   </ul>
 
@@ -913,6 +704,190 @@ func throttledQuery(queryQueue chan queryChan) {
 <div class="image">
   <img src="2013-08-18-220614_1366x768_scrot.png">
 </div>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h2>Getting started with Go</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Function declaration</h3>
+        
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code function_declaration.go}}
+--><pre>func doSomething(){
+    var foo int
+    foo = 6
+    bar := 8
+}</pre></div>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Zero values</h3>
+        
+  <ul>
+  
+    <li>By default, an uninitialized value carries the <b>zero value</b> for that type</li>
+  
+    <li>Encourages you to design your application in such a way that the default values are meaningful</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>For loops/If statements</h3>
+        
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code for_loop_example.go}}
+--><pre>func PrintAllNames(names []string){
+    for _, name := range names {
+        if name != &#34;&#34; {
+            fmt.Println(name)
+        }
+    }
+}</pre></div>
+
+  <ul>
+  
+    <li>Similar to &#34;enumerate&#34; in Python</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Error Handling </h3>
+        
+  <ul>
+  
+    <li><b>Explicit is better than implicit</b> (The Zen of Python)</li>
+  
+    <li>Instead of raising exceptions, <b>return errors</b></li>
+  
+    <li>Errors are more <b>visible</b> in the code</li>
+  
+  </ul>
+
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code error_example.go}}
+--><pre>func FindUser(c mgo.Collection, username string) result, err{
+    var result User
+    err := c.Find(bson.M{&#34;username&#34;, username}).One(&amp;result)
+    return result, err
+}
+
+func main(){
+    err := FindUser(&#34;JohnDoe&#34;)
+    if err != nil{
+        //Handle error
+        //Log error message, repeat action, etc.
+    }
+}</pre></div>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Structs</h3>
+        
+  <ul>
+  
+    <li>All fields are defined at compiletime</li>
+  
+    <li><b>No</b> inheritance</li>
+  
+  </ul>
+
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code struct_example.go}}
+--><pre>type CheckingAccount struct {
+    Balance int
+    superSecretId int64
+}</pre></div>
+
+  <ul>
+  
+    <li>Embedded structs are permitted</li>
+  
+  </ul>
+
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code embedded_struct.go}}
+--><pre>type Person struct {
+    MainAccount CheckingAccount
+}
+
+type Bank struct {
+    Accounts []CheckingAccount
+    SavingsAccounts []struct{
+        Balance int
+        InterestRate float64
+    }
+}</pre></div>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Interfaces in Go</h3>
+        
+  <ul>
+  
+    <li>If <b>any</b> type provides the methods of an interface, it belongs to the interface</li>
+  
+    <li>Like dynamic languages with &#34;duck&#34; typing, you simply use the struct and it &#34;just works&#34;</li>
+  
+    <li>Unlike dynamic languages, safety is checked at compile-time</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Using Interfaces</h3>
+        
+  <div class="code" contenteditable="true" spellcheck="false"><!--{{.code interface_example.go}}
+--><pre>type Account interface {
+    Deposit(int) error
+}
+
+type CheckingAccount struct {
+    Balance int 
+        superSecretId int64
+}
+
+func (destination CheckingAccount) Deposit(amount int) error {
+    destination.Balance += amount
+    return nil
+}</pre></div>
 
       
       </article>
